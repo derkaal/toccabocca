@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#2b2d42">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Pocket Town</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <div id="bg"></div>
+  <div id="props"></div>
+  <div id="ents"></div>
+  <div id="night"></div>
+  <div id="tray"><span class="tray-label">🎒</span></div>
+  <div id="fx"></div>
+</div>
+
+<div id="ui">
+  <div class="group">
+    <button class="btn" id="btnMap" aria-label="Map">🗺️</button>
+  </div>
+  <div id="locLabel"></div>
+  <div class="group">
+    <button class="btn" id="btnNight" aria-label="Day or night">🌙</button>
+    <button class="btn" id="btnSound" aria-label="Sound">🔊</button>
+    <button class="btn" id="btnHelp" aria-label="Help">❓</button>
+  </div>
+</div>
+
+<div class="overlay" id="map" hidden>
+  <div class="panel">
+    <h2>Where to?</h2>
+    <div class="cards" id="mapCards"></div>
+  </div>
+</div>
+
+<div class="overlay" id="editor" hidden>
+  <div class="panel editor-panel">
+    <div class="preview fh" id="edPreview"></div>
+    <div class="controls" id="edControls"></div>
+  </div>
+</div>
+
+<div class="overlay" id="help" hidden>
+  <div class="panel">
+    <h2>How to play</h2>
+    <ul class="help-list">
+      <li>✋ <b>Drag</b> people, pets and things anywhere.</li>
+      <li>😋 Drop food on a <b>mouth</b> to eat it, or put it in a hand and <b>tap</b> the person.</li>
+      <li>🎩 Drop hats and glasses on a <b>head</b>.</li>
+      <li>🪑 Drop people on sofas, chairs and benches to <b>sit</b>.</li>
+      <li>🧊 Tap the fridge, toy box, tree, wardrobe, doors… to find <b>surprises</b>.</li>
+      <li>🎒 Drop friends and things in your <b>pocket</b> at the bottom, then use 🗺️ to take them somewhere else.</li>
+      <li>✂️ <b>Double-tap</b> a person (or sit them in the style chair) to change their look.</li>
+      <li>🗑️ The trash can and the pond make things disappear.</li>
+    </ul>
+    <div class="row">
+      <button class="pill" id="btnHelpClose">Let's play!</button>
+      <button class="pill danger" id="btnReset">New world</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
